@@ -1,0 +1,30 @@
+<nav class="navbar navbar-custom navbar-expand-lg navbar-light bg-light flex-column">
+    <a href="#" class="navbar-left"><img  style="max-width:200px; margin-bottom: -70px;"src="{{ url_for('static', path='./images/水岸博谈.png') }}" width="250" height="50"></a>
+    <div class="container-fluid">
+        <!-- <a class="navbar-brand w-100"><h1>水岸博谈</h1></a> -->
+        <!-- <div type="button" id="sidebarCollapse" class="navbar-brand w-100">
+            <img src="{{ url_for('static', path='./images/水岸博谈.png') }}" width="250" height="50">
+        </div> -->
+
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <i class="fas fa-align-left"></i>
+            <span>目录</span>
+        </button>
+        <!-- <a class="navbar-brand mx-auto" ><img src="{{ url_for('static', path='./images/水岸博谈.png') }}" width="150" height="50"></a> -->
+        <!-- <a class="navbar-brand text-center w-100" ><h1>水岸博谈</h1></a> -->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item {{'active' if active_page == 'unsplash' }}">
+                    <a class="nav-link" href="/unsplash">联系方式</a>
+                </li>
+                <li class="nav-item {{'active' if active_page == 'twoforms' }}">
+                    <a class="nav-link" href="/twoforms">Two forms</a>
+                </li>
+                <li class="nav-item {{'active' if active_page == 'accordion' }}">
+                    <a class="nav-link" href="/accordion">Accordion</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
