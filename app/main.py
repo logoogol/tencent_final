@@ -9,10 +9,10 @@ from app.routers import twoforms, unsplash, accordion
 
 app = FastAPI()
 
+####这里的directory加了app/， static的directory也加了app/
+templates = Jinja2Templates(directory="app/templates")
 
-templates = Jinja2Templates(directory="templates")
-
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 app.include_router(unsplash.router)
 # app.include_router(twoforms.router)
@@ -25,7 +25,11 @@ async def home(request: Request):
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
 
 
-@app.get("/page/{page_name}", response_class=HTMLResponse)
+@app.get("/articles/{page_name}", response_class=HTMLResponse)
 async def show_page(request: Request, page_name: str):
+    return templates.TemplateResponse(page_name+".html", {"request": request})
+
+@app.get("/page/{page_name}", response_class=HTMLResponse)
+async def read_item(request: Request, page_name: str):
     data = openfile(page_name+".md")
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
