@@ -25,7 +25,11 @@ async def home(request: Request):
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
 
 
-@app.get("/page/{page_name}", response_class=HTMLResponse)
+@app.get("/articles/{page_name}", response_class=HTMLResponse)
 async def show_page(request: Request, page_name: str):
+    return templates.TemplateResponse(page_name+".html", {"request": request})
+
+@app.get("/page/{page_name}", response_class=HTMLResponse)
+async def read_item(request: Request, page_name: str):
     data = openfile(page_name+".md")
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
