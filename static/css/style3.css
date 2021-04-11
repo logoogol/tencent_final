@@ -38,22 +38,13 @@ a:focus {
 .navbar-custom {
     height: 100px;
   }
-/* .navbar-brand {
-    position: center;
-    width: 50%;
-    height: 100%;
-    top:  10px;
-    display: flex;
-	margin: 10px 5px;
-    padding-bottom: 70px;
-} */
+
 
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
     border: none;
 }
-
 
 .line {
     width: 100%;
@@ -73,7 +64,7 @@ a:focus {
     left: -250px;
     height: 100vh;
     z-index: 999;
-    background: #7386D5;
+    background: #7386d5;
     color: #fff;
     transition: all 0.3s;
     overflow-y: scroll;

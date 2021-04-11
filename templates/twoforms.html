@@ -10,24 +10,27 @@
 {% endblock %}
 
 {% block page_content %}
-<h1 class="cap">Two Forms</h1>
+<h3 class="cap"><u>黑猫翻译</u></h3><br>
 {% if message %}
-{{ message }}
-{% endif %}
+<p style="color:DodgerBlue;">译文:</p>
+{{result}}<br><br>
+<p style="color:DodgerBlue;">原文:</p>
+{{ message }} <br>
+{% endif %}<br>
 {% if yournum %}
 <h2>Your number is {{yournum}} and the result is {{result}}.</h2>
 {% endif %}
-<h3>Form 1: Add 2</h3>
+<h4 style="color:rgb(0, 68, 255);" >英译汉</h4>
 <form action="/form1" method="post">
-    <input type="number" name="number" value="" required />
-    <input type="submit">
+    <input type="str" name="str" value="" required placeholder="请在此输入英文" />
+    <input type="submit" class="like" value="开始翻译" >
 </form>
 
-<h3>Form 2: Add 100</h3>
+<!-- <h3>Form 2: Add 100</h3>
 <form action="/form2" method="post">
     <input type="number" name="number" value="" required />
     <input type="submit">
-</form>
+</form> -->
 
 
 

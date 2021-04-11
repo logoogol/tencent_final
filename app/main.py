@@ -15,13 +15,13 @@ templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.include_router(unsplash.router)
-# app.include_router(twoforms.router)
-# app.include_router(accordion.router)
-
+app.include_router(twoforms.router)
+app.include_router(accordion.router)
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    data = openfile("home.md")
+    # data = openfile("home.md")
+    data = []
     return templates.TemplateResponse("page.html", {"request": request, "data": data})
 
 
