@@ -14,30 +14,32 @@
     </div>
 </main> 
 <div class="container"> 
-    <h1>Pioneers Linking Math and Computer Science Win the Abel Prize</h1>
-    <p>When Avi Wigderson and László Lovász began their careers in the 1970s, 
-        theoretical computer science and pure mathematics were almost entirely separate disciplines. 
-        Today, they’ve grown so close it’s hard to find the line between them. 
-        For their many fundamental contributions to both fields, and for their work drawing them together, 
-        today Lovász and Wigderson were awarded the Abel Prize, an honor given out by the Norwegian
-         Academy of Science and Letters and regarded as one of the highest honors in mathematics.
-
-        “In many ways their work is complementary. Avi is on the computer science side and Lovász
-         is on the mathematics side, but a lot of the issues they work on are related,” 
-         said Russell Impagliazzo, a computer scientist at the University of California, 
-         San Diego who has collaborated with both researchers.<a style="color:blue" href="./page/about">..阅读全文</a>> </p> 
+    <h5>中美云计算竞争对比分析</h5>
+    <p style="color:blue"> 作者：东海宽客 ｜ 发表时间：2021年4月12日 </p>
+    <p>云计算信息时代的基础设施，也是中美竞争的必争之地之一。中美在云计算的竞争态势如何？
+        本文从市场占有率和作者本人亲身使用中美云服务的经历两个角度做一简要分析。</p>
+    <p>先看一下市场占有对比。</p>
+    <p>在前八大云服务公司中，美国占六席，中国二席，比例为3比1；在市场份额方面，美国六家公司占全球市场71%，
+        中国占8%，比例为9比1。对比悬殊。（数据来源：www.statista.com）</p>
     <center>
-        <img class="responsive" src="{{ url_for('static', path='./images/Biden.JPG') }}" width="800" height="600">
+            <img class="responsive" src="{{ url_for('static', path='./images/云市场份额.png') }}" width="800" height="600">
     </center>
+    <p>亚马逊、微软和谷歌的业务遍及全球。在中国市场之外，几乎在所有主要国家和地区皆包揽市场占有前三名。中国的云服务商在中国之外的业务几近于无，完全靠国内市场</p>
+    <!-- <p>with both researchers.<a style="color:blue" href="./page/about">..阅读全文</a> </p>  -->
+    <p>再看一下中美云服务产品和技术对比。</p>
+    <p>为了亲身感受对比中美云计算的技术水平，我分别在中美各一家云服务商亲自开发部署了一个网站。这两家中美云服务商都是上图中的8家之一。</p>
+    <p>云服务商的网站托管是一项很成熟的业务。写完网站的代码后，首先在美国的云服务商开始部署， 用了半个小时就大功告成。
+        但在中国的云服务商部署，却花了几个月的时间。费劲九牛二虎之力。
+    </p>
+    <p>从一开始，就不停地有各种问题。虽然不停地求助客服，但给出的回复要么是搪塞敷衍，要么是答非所问，
+        直至误导。最开始我用百度搜索相关问题的解决办法，但始终不成。最后，我把问题用英文在谷歌搜索，
+        成功找到解决办法。这说明，中国这家云服务商的技术系统不仅是从美国买回来的，而且买回来后没有丝毫改动！
+    </p>
+    <p>中美云计算的技术差距很大。根源在何？下篇文章将试着做个分析。</p>
 
-    <p>The .container class provides a responsive fixed width container.</p>
-    <p>Resize the browser window to see that its width (max-width) will change at different breakpoints.The .
-        container class provides a responsive fixed width container.</p>
   </div>
   
-<!-- -<h2 align="center">东海宽客</h2>
-<center><img class="responsive" src="{{ url_for('static', path='./images/Biden.JPG') }}" width="400" height="400"></center> -->
-
+{{data.page}}
 
 {% endblock %}
 
